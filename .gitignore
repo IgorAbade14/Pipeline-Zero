@@ -11,6 +11,7 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+*.tfplan
 
 # Credenciais e segredos
 .env
@@ -29,4 +30,4 @@ __pycache__/
 # Editor e sistema
 .vscode/
 .idea/
-.DS_Store
+.DS_Storetfplan
