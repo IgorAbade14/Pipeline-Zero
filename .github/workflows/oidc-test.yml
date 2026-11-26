@@ -13,6 +13,11 @@ jobs:
   test-oidc:
     runs-on: ubuntu-latest
     steps:
+      - name: Verificar variável
+        env:
+          ROLE: ${{ vars.AWS_ROLE_ARN }}
+        run: |
+          if [ -z "$ROLE" ]; then echo "VARIÁVEL VAZIA"; else echo "Variável preenchida"; fi
       - name: Configurar credenciais AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
